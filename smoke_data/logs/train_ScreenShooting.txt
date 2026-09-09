@@ -1,0 +1,4 @@
+[epoch 1/2, iter 4] loss=3.1728 msg=1.0631 img=1.1457 gan=0.6594 stat=0.3046
+[epoch 1] val msg_acc=0.00% bit_acc=50.17% seq_ber=49.72% psnr=13.42dB (8s)
+[epoch 2/2, iter 4] loss=3.1338 msg=1.0480 img=1.1108 gan=0.6718 stat=0.3033
+[epoch 2] val msg_acc=0.00% bit_acc=50.17% seq_ber=49.54% psnr=13.47dB (16s)
