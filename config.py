@@ -13,8 +13,8 @@ class Config:
     # ---- 数据 ----
     dataset_dir: str = 'dataset'        # 训练数据根目录（其下 train/ val/）
     image_dir: str = ''                 # embed/extract 的图像目录
-    image_size: int = 128
-    batch_size: int = 16
+    image_size: int = 256               # 输入分辨率（128 亦可用）
+    batch_size: int = 4                 # 256×256 下 4GB 显存安全值
     num_workers: int = 0                # Windows 下默认 0
 
     # ---- 模型 / 训练 ----
@@ -34,6 +34,7 @@ class Config:
     log_dir: str = 'logs'
     result_dir: str = 'results'
     model_path: str = ''                # embed/extract 加载的 checkpoint
+    resume: str = ''                    # train 断点续训的 checkpoint 路径
     log_step: int = 40
     eval_every: int = 1
     model_save_step: int = 1
@@ -68,7 +69,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     # ---- train ----
     p_tr = sub.add_parser('train', help='训练编码器/解码器/判别器')
     p_tr.add_argument('--dataset_dir', type=str, default='dataset')
-    p_tr.add_argument('--batch_size', type=int, default=16)
+    p_tr.add_argument('--image_size', type=int, default=256,
+                      help='输入分辨率（默认 256，128 亦可用）')
+    p_tr.add_argument('--batch_size', type=int, default=4)
     p_tr.add_argument('--num_epoch', type=int, default=100)
     p_tr.add_argument('--lr', type=float, default=1e-4)
     p_tr.add_argument('--lambda1', type=float, default=3.0, help='序列 MSE 权重')
@@ -84,6 +87,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p_tr.add_argument('--checkpoint_dir', type=str, default='checkpoints')
     p_tr.add_argument('--log_dir', type=str, default='logs')
     p_tr.add_argument('--result_dir', type=str, default='results')
+    p_tr.add_argument('--resume', type=str, default='',
+                      help='断点续训：加载 checkpoint（模型+优化器+epoch+best_acc）')
     p_tr.add_argument('--log_step', type=int, default=40)
     p_tr.add_argument('--eval_every', type=int, default=1)
     p_tr.add_argument('--model_save_step', type=int, default=1)
@@ -96,7 +101,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p_em.add_argument('--image_dir', type=str, required=True)
     p_em.add_argument('--message', type=str, default='',
                       help='18bit 字符串；缺省随机（写入 gt.json）')
-    p_em.add_argument('--image_size', type=int, default=128)
+    p_em.add_argument('--image_size', type=int, default=256)
     p_em.add_argument('--result_dir', type=str, default='results')
     p_em.add_argument('--batch_size', type=int, default=8)
     p_em.add_argument('--num_workers', type=int, default=0)
@@ -108,7 +113,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p_ex.add_argument('--image_dir', type=str, required=True)
     p_ex.add_argument('--watermark_file', type=str, default='',
                       help='地面真值 gt.json（embed 输出），用于统计准确率/BER')
-    p_ex.add_argument('--image_size', type=int, default=128)
+    p_ex.add_argument('--image_size', type=int, default=256)
     p_ex.add_argument('--batch_size', type=int, default=8)
     p_ex.add_argument('--num_workers', type=int, default=0)
     p_ex.add_argument('--seed', type=int, default=0)
@@ -116,7 +121,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     # ---- smoke ----
     p_sm = sub.add_parser('smoke', help='合成数据冒烟测试（docs/06 §4）')
     p_sm.add_argument('--smoke_iters', type=int, default=5)
-    p_sm.add_argument('--image_size', type=int, default=128)
+    p_sm.add_argument('--image_size', type=int, default=256)
     p_sm.add_argument('--seed', type=int, default=0)
 
     return parser

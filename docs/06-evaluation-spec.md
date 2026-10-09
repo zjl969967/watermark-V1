@@ -31,7 +31,7 @@
 | S1 编码往返 | 1000 个随机消息构造→解码（含全0/全1） | 消息零错误 |
 | S2 特征网格 | 每特征遍历 8 级别，测量 vs 网格表 | F1~F5 精确（≤1e-6）；F6 偏差 ≤ 0.15 |
 | S3 容错 | 构造序列随机翻转 1~2 符号再解码 | 消息位准确率 ≥ 16/18 |
-| S4 前向形状 | Encoder→Noise→[Crop]→Decoder，batch=2，128×128 | 形状 (2,3,128,128)/(2,192)；无异常 |
+| S4 前向形状 | Encoder→Noise→[Crop]→Decoder，batch=2，image_size×image_size（默认 256×256，128 亦验） | 形状 (2,3,S,S)/(2,192)；无异常 |
 | S5 短训练 | 合成数据 32 图，短训练（默认 2 epoch × 4 iter，`--smoke_iters` 可调），全损失（含 GAN） | 损失均为有限值；msg/img/stat 损失不爆炸（≤ 初值×10） |
 | S6 端到端 | 训练后 embed 2 图 → ScreenShooting 噪声 → extract | 管线跑通，输出 18 bit 消息（准确率仅作记录，不作门槛） |
 

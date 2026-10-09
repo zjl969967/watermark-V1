@@ -149,7 +149,8 @@ class U_Net_Encoder_Diffusion(nn.Module):
 
         x6 = self.Globalpool(x4)
         x7 = x6.repeat(1, 1, 4, 4)
-        em = self._expand(watermark, (16, 16))
+        # 瓶颈注入尺寸跟随 x4（128 输入 → 16×16；256 输入 → 32×32）
+        em = self._expand(watermark, (x4.shape[2], x4.shape[3]))
         x4 = torch.cat((x4, x7, em), dim=1)
 
         d4 = self.Up4(x4)
@@ -172,7 +173,11 @@ class U_Net_Encoder_Diffusion(nn.Module):
 
 
 class Extractor(nn.Module):
-    """PIMoG 残差提取头：1×16×16=256 → Linear(256→192)。"""
+    """PIMoG 残差提取头：自适应池化 → 1×16×16=256 → Linear(256→192)。
+
+    任意输入分辨率可用：layer5 输出经 AdaptiveAvgPool2d 固定为 16×16
+    （128 输入时 16×16 不变；256 输入时 32×32 → 16×16）。
+    """
 
     def __init__(self, inchannel=64, msg_len=MSG_LEN):
         super(Extractor, self).__init__()
@@ -181,6 +186,7 @@ class Extractor(nn.Module):
         self.layer3 = nn.Sequential(ResidualBlock(64, 64, 1), ResidualBlock(64, 64, 2))
         self.layer4 = nn.Sequential(ResidualBlock(64, 64, 1), ResidualBlock(64, 64, 2))
         self.layer5 = nn.Conv2d(64, 1, kernel_size=1, stride=1, padding=0, bias=False)
+        self.pool = nn.AdaptiveAvgPool2d((16, 16))
         self.linear = nn.Linear(256, msg_len)
 
     def forward(self, x):
@@ -189,6 +195,7 @@ class Extractor(nn.Module):
         out = self.layer3(out)
         out = self.layer4(out)
         out = self.layer5(out)
+        out = self.pool(out)
         out.squeeze_(1)
         out = out.view(-1, 1, 256)
         out = self.linear(out)

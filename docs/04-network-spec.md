@@ -5,7 +5,7 @@
 
 ## 1. 编码器 Encoder（`U_Net_Encoder_Diffusion` 改造）
 
-PIMoG 结构不变（3 通道 128×128 输入 → 3 通道输出含水印图），仅两处改动：
+PIMoG 结构不变（3 通道 H×W 输入 → 3 通道输出含水印图；**默认 256×256，128 亦可用**），仅两处改动：
 
 | 项 | PIMoG | 本方案 |
 |----|-------|--------|
@@ -13,17 +13,19 @@ PIMoG 结构不变（3 通道 128×128 输入 → 3 通道输出含水印图）�
 | 消息取值 | {0,1} | **{±1}**（直接作为全连接输入） |
 
 结构要点（照抄 PIMoG 超参）：
-- 下采样路径 DoubleConv(3→16→32→64)，MaxPool 逐级减半，瓶颈 8×8；
-- 消息注入：`Linear(192→256)` → view(1,16,16) → DoubleConv(1→64)，在 4 个上采样层级
-  分别插值到对应分辨率并 concat（与 PIMoG 完全一致，仅 Linear 输入维度改为 192）；
-- GlobalPool + repeat 的全局上下文注入保持不变；
+- 下采样路径 DoubleConv(3→16→32→64)，MaxPool 逐级减半；
+- 消息注入：`Linear(192→256)` → view(1,16,16) → DoubleConv(1→64)，在瓶颈与 3 个
+  上采样层级分别插值到目标分辨率并 concat；**瓶颈注入尺寸动态跟随 x4**
+  （128 输入 → 16×16；256 输入 → 32×32），因此任意输入分辨率可用；
+- GlobalPool(kernel=4) + repeat(4×) 的全局上下文注入保持不变（与 x4 尺寸自动匹配）；
 - 输出 `Conv2d(16→3, 1×1)`，无激活（与 PIMoG 一致，输出视为 [−1,1] 附近）。
 
 ## 2. 解码器 Decoder（`Decoder`/`Extractor` 改造）
 
 - 前端 `layer1`：3×SingleConv(3→64) + 3×ResidualBlock，与 PIMoG 相同；
-- `Extractor`：SingleConv + 3 组 (ResidualBlock×2，stride 2) → 1×16×16=256 →
-  `Linear(256→192)`（**PIMoG 为 256→30**）；
+- `Extractor`：SingleConv + 3 组 (ResidualBlock×2，stride 2) → 1 通道空间特征 →
+  **AdaptiveAvgPool2d(16×16)** → 256 → `Linear(256→192)`（**PIMoG 为 256→30**；
+  池化使读出头不依赖输入分辨率：128 输入 16×16 不变，256 输入 32×32→16×16）；
 - 输出 192 维实值 v，训练目标为 ±1（MSE），推理时硬阈值（02 文档 §6）。
 
 ## 3. 判别器 Discriminator
@@ -47,7 +49,8 @@ GAN 损失与交替更新顺序与 PIMoG `solver.train_mask` 相同。
 
 - **启用方式**：训练时 `--crop`；默认关闭（关闭时训练仅过屏摄噪声层）。
 - **语义**：模拟"部分拍摄"——随机裁剪原图面积的 a∈[0.2, 1.0]（`crop_min_area=0.2`），
-  长宽比在 [3/4, 4/3] 内随机，裁剪窗口位置均匀随机，随后**双线性缩放回 128×128**。
+  长宽比在 [3/4, 4/3] 内随机，裁剪窗口位置均匀随机，随后**双线性缩放回原尺寸**
+  （128 或 256，由输入决定）。
 - **实现（可微分）**：kornia `warp_affine`，每样本仿射矩阵 = 以裁剪窗口中心为旋转中心、
   scale=(H/h_c, W/w_c) 的缩放矩阵（`get_affine_matrix2d` + `get_rotation_matrix2d`），
   `padding_mode='border'`；梯度经双线性采样回传。
@@ -80,7 +83,11 @@ GAN 损失与交替更新顺序与 PIMoG `solver.train_mask` 相同。
   **序列 BER**（192 位平均误码率），日志写入 `logs/train_<distortion>[_crop].txt`；
 - 保存策略：每 `model_save_step` epoch 存 `checkpoints/checkpoint_epoch_<e>.pth`，
   另存 `checkpoints/best.pth`（按 val 消息准确率）；
-- checkpoint 内容：`{'encoder':..., 'decoder':..., 'discriminator':..., 'epoch':...}`
+- checkpoint 内容：`{'encoder','decoder','discriminator','optimizer','optimizer_D',
+  'epoch','best_acc'}`（含优化器状态，保证续训无缝）；
+- **断点续训**：`--resume checkpoints/checkpoint_epoch_<e>.pth`——恢复模型/判别器/
+  优化器/epoch/best_acc，从 epoch e+1 继续；日志以追加模式续写，best.pth 只在新结果
+  更好时更新（不会被重启的差结果覆盖）；
   （单 GPU，不使用 DataParallel，与 PIMoG 的 DataParallel 写法不同——规范以此为 v1 约定）。
 
 ## 7. 评估 / 嵌入 / 提取（`solver.py`）

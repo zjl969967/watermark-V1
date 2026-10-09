@@ -53,8 +53,8 @@ smoke_test       ──→ 以上全部 + 合成数据生成
 
 | 字段 | 默认 | 说明 |
 |------|------|------|
-| image_size | 128 | 输入/输出分辨率 |
-| batch_size | 16 | 批大小 |
+| image_size | 256 | 输入/输出分辨率（128 亦可用，`--image_size` 可调） |
+| batch_size | 4 | 批大小（256×256 下 4GB 显存安全值；大显存可调大） |
 | num_epoch | 100 | 训练轮数（全量训练由用户执行） |
 | lr | 1e-4 | 编码器/解码器与判别器共用学习率（Adam） |
 | lambda1 | 3 | 序列 MSE 损失权重（message） |
@@ -71,6 +71,7 @@ smoke_test       ──→ 以上全部 + 合成数据生成
 | message | 随机 | 嵌入模式使用的 18 bit 消息字符串 |
 | watermark_file | 无 | 提取模式的地面真值 JSON（可选） |
 | model_path | 无 | 嵌入/提取模式加载的 checkpoint |
+| resume | 无 | 训练断点续训的 checkpoint（恢复模型+优化器+epoch+best_acc） |
 | num_workers | 0 | DataLoader 工作进程数（Windows 下默认 0） |
 | log_step | 40 | 训练日志间隔（iter） |
 | eval_every | 1 | 验证频率（epoch） |
@@ -79,7 +80,7 @@ smoke_test       ──→ 以上全部 + 合成数据生成
 ## 4. CLI（`main.py`）
 
 ```
-python main.py train   [--dataset_dir dataset/] [--num_epoch 100] [--crop] [--distortion ScreenShooting|Identity] ...
+python main.py train   [--dataset_dir dataset/] [--num_epoch 100] [--crop] [--resume checkpoints/xxx.pth] [--distortion ScreenShooting|Identity] ...
 python main.py embed   --model_path checkpoints/xxx.pth [--image_dir results/embed_in/] [--message 010101...] 
 python main.py extract --model_path checkpoints/xxx.pth [--image_dir ...] [--watermark_file gt.json]
 python main.py smoke   [--smoke_iters 5]
@@ -95,7 +96,7 @@ python main.py smoke   [--smoke_iters 5]
 ## 5. 训练数据流（每 iter）
 
 ```
-batch 图像 I (B,3,128,128) ∈ [−1,1]
+batch 图像 I (B,3,H,W) ∈ [−1,1]（默认 H=W=256）
 随机消息 m_b (18bit) → 构造序列 s_b (±1,192)
 Encoder(I, s) → I_w
 NoiseLayer(I_w) → I_n          # ScreenShooting 或 Identity

@@ -11,7 +11,8 @@ dataset/
 ```
 
 - 图像为**普通整幅图像**（不需要 PIMoG 的"左图右掩膜"双列格式）；
-- 推荐 ≥ 200 张自然图像；图像会被统一 resize 到 128×128。
+- 推荐 ≥ 200 张自然图像；图像会被统一 resize 到 `image_size`（**默认 256×256**，
+  小于该尺寸会被放大，建议源图 ≥ 256）。
 
 ## 2. 加载与预处理（`data_loader.py`）
 
@@ -19,10 +20,10 @@ dataset/
 |------|------|
 | 扫描 | 递归收集目录下所有支持后缀文件，排序后打乱（seed 控制） |
 | 读取 | cv2.imread（BGR→RGB） |
-| 几何 | 保持比例 resize 短边到 128 后中心裁剪 128×128 |
+| 几何 | 保持比例 resize 短边到 image_size 后中心裁剪 image_size×image_size |
 | 归一化 | float32 → [−1,1]（`x/255*2−1`，与 PIMoG 一致） |
 | 消息 | 训练：每图随机 18 bit 消息 → 构造 192 序列（02 文档 §5）；验证/测试同 |
-| 返回 | `(image[3,128,128], sequence[192]±1, message_str[18], index)` |
+| 返回 | `(image[3,S,S], sequence[192]±1, message_str[18], index)`（S=image_size，默认 256） |
 
 - DataLoader：`num_workers` 默认 0（Windows 安全），`drop_last=True`；
 - 若 `dataset/train/` 为空：训练入口直接报错并提示先放入数据（冒烟测试不依赖此目录）。
@@ -36,6 +37,6 @@ dataset/
 
 ## 4. 冒烟测试合成数据（`smoke_data/`）
 
-- 由 `smoke_test.py` 生成 32 张 128×128 合成图：随机水平/垂直/径向渐变 + 随机圆斑 +
+- 由 `smoke_test.py` 生成 32 张 image_size×image_size 合成图：随机水平/垂直/径向渐变 + 随机圆斑 +
   平滑噪声纹理的组合，模拟自然图像的低频结构；
 - 仅用于冒烟测试（管线验证），**不作为真实训练数据**；用户正式训练请使用 `dataset/`。

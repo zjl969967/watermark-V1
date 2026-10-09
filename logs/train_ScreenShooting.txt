@@ -1,0 +1,389 @@
+[epoch 1/200, iter 40] loss=3.1684 msg=0.9894 img=1.1434 gan=0.7160 stat=0.3197
+[epoch 1/200, iter 80] loss=2.8791 msg=0.8506 img=0.9372 gan=0.8216 stat=0.2698
+[epoch 1/200, iter 120] loss=2.7140 msg=0.7892 img=0.7936 gan=0.8804 stat=0.2509
+[epoch 1/200, iter 160] loss=2.6747 msg=0.7946 img=0.7268 gan=0.9242 stat=0.2290
+[epoch 1/200, iter 200] loss=2.6404 msg=0.7934 img=0.6075 gan=0.9858 stat=0.2536
+[epoch 1/200, iter 240] loss=2.5960 msg=0.7975 img=0.4827 gan=1.0536 stat=0.2623
+[epoch 1/200, iter 280] loss=2.5347 msg=0.8043 img=0.4262 gan=1.0669 stat=0.2373
+[epoch 1/200, iter 320] loss=2.5251 msg=0.7841 img=0.3996 gan=1.1008 stat=0.2405
+[epoch 1/200, iter 360] loss=2.5025 msg=0.7926 img=0.3281 gan=1.1554 stat=0.2263
+[epoch 1] val msg_acc=0.00% bit_acc=50.41% seq_ber=27.35% psnr=15.75dB (1293s)
+[epoch 2/200, iter 40] loss=2.4816 msg=0.7816 img=0.2953 gan=1.1673 stat=0.2375
+[epoch 2/200, iter 80] loss=2.5124 msg=0.7990 img=0.2379 gan=1.2456 stat=0.2298
+[epoch 2/200, iter 120] loss=2.5271 msg=0.7831 img=0.2230 gan=1.2890 stat=0.2320
+[epoch 2/200, iter 160] loss=2.5245 msg=0.7848 img=0.2134 gan=1.2659 stat=0.2604
+[epoch 2/200, iter 200] loss=2.4916 msg=0.7902 img=0.1876 gan=1.2691 stat=0.2447
+[epoch 2/200, iter 240] loss=2.4311 msg=0.7828 img=0.1766 gan=1.2300 stat=0.2417
+[epoch 2/200, iter 280] loss=2.5148 msg=0.7712 img=0.1674 gan=1.3303 stat=0.2459
+[epoch 2/200, iter 320] loss=2.6003 msg=0.7883 img=0.1646 gan=1.4028 stat=0.2446
+[epoch 2/200, iter 360] loss=2.5329 msg=0.7884 img=0.1649 gan=1.3502 stat=0.2294
+[epoch 2] val msg_acc=0.00% bit_acc=50.41% seq_ber=27.35% psnr=19.08dB (3293s)
+[epoch 3/200, iter 40] loss=2.5182 msg=0.7805 img=0.1386 gan=1.3659 stat=0.2332
+[epoch 3/200, iter 80] loss=2.6090 msg=0.7849 img=0.1431 gan=1.4374 stat=0.2437
+[epoch 3/200, iter 120] loss=2.6157 msg=0.7824 img=0.1333 gan=1.4546 stat=0.2454
+[epoch 3/200, iter 160] loss=2.5712 msg=0.7927 img=0.1257 gan=1.4169 stat=0.2360
+[epoch 3/200, iter 200] loss=2.7765 msg=0.7826 img=0.1420 gan=1.6147 stat=0.2371
+[epoch 3/200, iter 240] loss=2.6249 msg=0.7946 img=0.1179 gan=1.4584 stat=0.2540
+[epoch 3/200, iter 280] loss=2.5759 msg=0.7936 img=0.1265 gan=1.4301 stat=0.2257
+[epoch 3/200, iter 320] loss=2.7291 msg=0.7813 img=0.1167 gan=1.5848 stat=0.2463
+[epoch 3/200, iter 360] loss=2.5807 msg=0.7780 img=0.1131 gan=1.4562 stat=0.2334
+[epoch 3] val msg_acc=0.00% bit_acc=50.70% seq_ber=27.41% psnr=20.74dB (5309s)
+[epoch 4/200, iter 40] loss=2.7237 msg=0.7929 img=0.1104 gan=1.5933 stat=0.2272
+[epoch 4/200, iter 80] loss=2.7095 msg=0.7817 img=0.1051 gan=1.5811 stat=0.2416
+[epoch 4/200, iter 120] loss=2.8155 msg=0.7872 img=0.1329 gan=1.6625 stat=0.2329
+[epoch 4/200, iter 160] loss=2.8796 msg=0.7878 img=0.1095 gan=1.7314 stat=0.2508
+[epoch 4/200, iter 200] loss=2.8474 msg=0.7754 img=0.1080 gan=1.7103 stat=0.2536
+[epoch 4/200, iter 240] loss=2.6735 msg=0.7917 img=0.0924 gan=1.5541 stat=0.2352
+[epoch 4/200, iter 280] loss=2.9816 msg=0.7810 img=0.1030 gan=1.8724 stat=0.2252
+[epoch 4/200, iter 320] loss=2.9641 msg=0.7848 img=0.1028 gan=1.8266 stat=0.2499
+[epoch 4/200, iter 360] loss=2.9680 msg=0.7783 img=0.0913 gan=1.8530 stat=0.2455
+[epoch 4] val msg_acc=0.00% bit_acc=50.25% seq_ber=27.20% psnr=21.25dB (7318s)
+[epoch 5/200, iter 40] loss=2.8280 msg=0.7922 img=0.0948 gan=1.6999 stat=0.2412
+[epoch 5/200, iter 80] loss=2.8561 msg=0.7853 img=0.1022 gan=1.7484 stat=0.2203
+[epoch 5/200, iter 120] loss=2.8496 msg=0.7713 img=0.0925 gan=1.7497 stat=0.2361
+[epoch 5/200, iter 160] loss=3.0569 msg=0.7941 img=0.0998 gan=1.9218 stat=0.2412
+[epoch 5/200, iter 200] loss=3.1223 msg=0.7777 img=0.1026 gan=2.0108 stat=0.2313
+[epoch 5/200, iter 240] loss=3.0318 msg=0.7874 img=0.0822 gan=1.9111 stat=0.2511
+[epoch 5/200, iter 280] loss=3.0780 msg=0.7856 img=0.0940 gan=1.9639 stat=0.2345
+[epoch 5/200, iter 320] loss=3.2073 msg=0.7852 img=0.0901 gan=2.0935 stat=0.2384
+[epoch 5/200, iter 360] loss=3.0340 msg=0.7705 img=0.0858 gan=1.9355 stat=0.2422
+[epoch 5] val msg_acc=0.00% bit_acc=51.24% seq_ber=27.20% psnr=22.35dB (9348s)
+[epoch 6/200, iter 40] loss=3.1410 msg=0.7826 img=0.0880 gan=2.0368 stat=0.2337
+[epoch 6/200, iter 80] loss=3.0212 msg=0.7788 img=0.0929 gan=1.9093 stat=0.2403
+[epoch 6/200, iter 120] loss=3.1157 msg=0.7819 img=0.0936 gan=2.0100 stat=0.2303
+[epoch 6/200, iter 160] loss=3.0949 msg=0.7896 img=0.0952 gan=1.9650 stat=0.2452
+[epoch 6/200, iter 200] loss=3.0393 msg=0.7775 img=0.0800 gan=1.9630 stat=0.2188
+[epoch 6/200, iter 240] loss=3.0296 msg=0.7792 img=0.0949 gan=1.9251 stat=0.2304
+[epoch 6/200, iter 280] loss=3.0610 msg=0.7791 img=0.0805 gan=1.9646 stat=0.2368
+[epoch 6/200, iter 320] loss=3.1766 msg=0.7708 img=0.0777 gan=2.0906 stat=0.2375
+[epoch 6/200, iter 360] loss=3.1124 msg=0.7678 img=0.0970 gan=2.0071 stat=0.2406
+[epoch 6] val msg_acc=0.00% bit_acc=51.27% seq_ber=26.98% psnr=23.11dB (11355s)
+[epoch 7/200, iter 40] loss=3.0459 msg=0.7706 img=0.0762 gan=1.9672 stat=0.2318
+[epoch 7/200, iter 80] loss=3.0905 msg=0.7724 img=0.1097 gan=1.9716 stat=0.2367
+[epoch 7/200, iter 120] loss=3.1282 msg=0.7540 img=0.0806 gan=2.0723 stat=0.2212
+[epoch 7/200, iter 160] loss=3.0629 msg=0.7700 img=0.0930 gan=1.9557 stat=0.2442
+[epoch 7/200, iter 200] loss=3.2418 msg=0.7652 img=0.0836 gan=2.1676 stat=0.2254
+[epoch 7/200, iter 240] loss=3.2690 msg=0.7762 img=0.0889 gan=2.1738 stat=0.2301
+[epoch 7/200, iter 280] loss=3.1413 msg=0.7520 img=0.0758 gan=2.0778 stat=0.2357
+[epoch 7/200, iter 320] loss=2.9586 msg=0.7473 img=0.0837 gan=1.9089 stat=0.2187
+[epoch 7/200, iter 360] loss=3.2029 msg=0.7467 img=0.0832 gan=2.1585 stat=0.2144
+[epoch 7] val msg_acc=0.00% bit_acc=51.43% seq_ber=25.87% psnr=23.01dB (13358s)
+[epoch 8/200, iter 40] loss=3.3605 msg=0.7382 img=0.0894 gan=2.3096 stat=0.2234
+[epoch 8/200, iter 80] loss=3.1433 msg=0.7223 img=0.0698 gan=2.1145 stat=0.2368
+[epoch 8/200, iter 120] loss=3.1952 msg=0.7191 img=0.0763 gan=2.1700 stat=0.2299
+[epoch 8/200, iter 160] loss=3.1142 msg=0.6995 img=0.0849 gan=2.1178 stat=0.2120
+[epoch 8/200, iter 200] loss=3.1170 msg=0.6908 img=0.0782 gan=2.1297 stat=0.2182
+[epoch 8/200, iter 240] loss=3.1238 msg=0.6878 img=0.0818 gan=2.1286 stat=0.2256
+[epoch 8/200, iter 280] loss=3.0861 msg=0.6617 img=0.0925 gan=2.1009 stat=0.2310
+[epoch 8/200, iter 320] loss=3.0310 msg=0.6510 img=0.1007 gan=2.0556 stat=0.2237
+[epoch 8/200, iter 360] loss=3.2246 msg=0.6548 img=0.0854 gan=2.2744 stat=0.2101
+[epoch 8] val msg_acc=0.00% bit_acc=56.67% seq_ber=21.57% psnr=22.44dB (15359s)
+[epoch 9/200, iter 40] loss=3.1480 msg=0.6029 img=0.0847 gan=2.2147 stat=0.2458
+[epoch 9/200, iter 80] loss=3.2375 msg=0.5902 img=0.0795 gan=2.3591 stat=0.2088
+[epoch 9/200, iter 120] loss=3.0985 msg=0.5665 img=0.0825 gan=2.2335 stat=0.2161
+[epoch 9/200, iter 160] loss=3.0428 msg=0.5708 img=0.0943 gan=2.1718 stat=0.2058
+[epoch 9/200, iter 200] loss=3.0340 msg=0.5462 img=0.0958 gan=2.1778 stat=0.2143
+[epoch 9/200, iter 240] loss=3.2719 msg=0.5518 img=0.0792 gan=2.4209 stat=0.2200
+[epoch 9/200, iter 280] loss=2.9731 msg=0.5340 img=0.0992 gan=2.1364 stat=0.2035
+[epoch 9/200, iter 320] loss=3.2010 msg=0.5066 img=0.0811 gan=2.3873 stat=0.2260
+[epoch 9/200, iter 360] loss=3.0308 msg=0.4871 img=0.0947 gan=2.2356 stat=0.2133
+[epoch 9] val msg_acc=0.00% bit_acc=72.10% seq_ber=14.53% psnr=23.08dB (17358s)
+[epoch 10/200, iter 40] loss=3.2006 msg=0.4395 img=0.0910 gan=2.4521 stat=0.2180
+[epoch 10/200, iter 80] loss=3.2604 msg=0.4399 img=0.0932 gan=2.5099 stat=0.2174
+[epoch 10/200, iter 120] loss=2.9443 msg=0.4267 img=0.0846 gan=2.2242 stat=0.2088
+[epoch 10/200, iter 160] loss=2.9168 msg=0.4171 img=0.0793 gan=2.2145 stat=0.2058
+[epoch 10/200, iter 200] loss=2.9851 msg=0.3884 img=0.0750 gan=2.3138 stat=0.2080
+[epoch 10/200, iter 240] loss=2.9630 msg=0.3826 img=0.0866 gan=2.2862 stat=0.2075
+[epoch 10/200, iter 280] loss=3.2434 msg=0.3842 img=0.0707 gan=2.5698 stat=0.2186
+[epoch 10/200, iter 320] loss=2.8511 msg=0.3703 img=0.0785 gan=2.1954 stat=0.2068
+[epoch 10/200, iter 360] loss=2.9971 msg=0.3499 img=0.0962 gan=2.3385 stat=0.2125
+[epoch 10] val msg_acc=1.14% bit_acc=82.22% seq_ber=7.82% psnr=22.98dB (19355s)
+[epoch 11/200, iter 40] loss=3.1108 msg=0.3175 img=0.0767 gan=2.5037 stat=0.2129
+[epoch 11/200, iter 80] loss=3.0087 msg=0.3046 img=0.0784 gan=2.4239 stat=0.2018
+[epoch 11/200, iter 120] loss=2.9702 msg=0.2940 img=0.0707 gan=2.4017 stat=0.2038
+[epoch 11/200, iter 160] loss=3.1309 msg=0.2836 img=0.0861 gan=2.5579 stat=0.2033
+[epoch 11/200, iter 200] loss=3.0701 msg=0.2783 img=0.0831 gan=2.4966 stat=0.2121
+[epoch 11/200, iter 240] loss=2.9665 msg=0.2707 img=0.0724 gan=2.4214 stat=0.2020
+[epoch 11/200, iter 280] loss=3.1331 msg=0.2563 img=0.0899 gan=2.5831 stat=0.2038
+[epoch 11/200, iter 320] loss=2.9508 msg=0.2478 img=0.0908 gan=2.4085 stat=0.2036
+[epoch 11/200, iter 360] loss=3.0138 msg=0.2414 img=0.0836 gan=2.4867 stat=0.2022
+[epoch 11] val msg_acc=14.86% bit_acc=90.57% seq_ber=3.41% psnr=23.49dB (21360s)
+[epoch 12/200, iter 40] loss=3.0089 msg=0.2166 img=0.0761 gan=2.5204 stat=0.1957
+[epoch 12/200, iter 80] loss=3.1322 msg=0.2061 img=0.0873 gan=2.6434 stat=0.1953
+[epoch 12/200, iter 120] loss=2.9836 msg=0.2054 img=0.0866 gan=2.4882 stat=0.2033
+[epoch 12/200, iter 160] loss=3.1084 msg=0.1914 img=0.0969 gan=2.6162 stat=0.2039
+[epoch 12/200, iter 200] loss=3.0498 msg=0.1882 img=0.0849 gan=2.5788 stat=0.1979
+[epoch 12/200, iter 240] loss=3.1723 msg=0.1858 img=0.0829 gan=2.7082 stat=0.1954
+[epoch 12/200, iter 280] loss=3.2549 msg=0.1799 img=0.0670 gan=2.8329 stat=0.1751
+[epoch 12/200, iter 320] loss=3.3065 msg=0.1761 img=0.0826 gan=2.8555 stat=0.1923
+[epoch 12/200, iter 360] loss=3.2967 msg=0.1702 img=0.0877 gan=2.8571 stat=0.1817
+[epoch 12] val msg_acc=36.00% bit_acc=94.00% seq_ber=1.25% psnr=23.15dB (23364s)
+[epoch 13/200, iter 40] loss=3.2129 msg=0.1443 img=0.0746 gan=2.8100 stat=0.1839
+[epoch 13/200, iter 80] loss=3.0677 msg=0.1409 img=0.0719 gan=2.6822 stat=0.1727
+[epoch 13/200, iter 120] loss=2.8525 msg=0.1384 img=0.0879 gan=2.4430 stat=0.1831
+[epoch 13/200, iter 160] loss=2.9245 msg=0.1380 img=0.0888 gan=2.5107 stat=0.1869
+[epoch 13/200, iter 200] loss=3.2032 msg=0.1315 img=0.0808 gan=2.8083 stat=0.1825
+[epoch 13/200, iter 240] loss=3.0566 msg=0.1261 img=0.0915 gan=2.6689 stat=0.1700
+[epoch 13/200, iter 280] loss=3.0357 msg=0.1245 img=0.0692 gan=2.6616 stat=0.1805
+[epoch 13/200, iter 320] loss=3.1325 msg=0.1221 img=0.0714 gan=2.7713 stat=0.1677
+[epoch 13/200, iter 360] loss=2.9886 msg=0.1188 img=0.0693 gan=2.6269 stat=0.1736
+[epoch 13] val msg_acc=84.00% bit_acc=99.05% seq_ber=0.23% psnr=23.26dB (25362s)
+[epoch 14/200, iter 40] loss=3.1269 msg=0.1025 img=0.0690 gan=2.7886 stat=0.1668
+[epoch 14/200, iter 80] loss=3.0330 msg=0.0980 img=0.0896 gan=2.6769 stat=0.1686
+[epoch 14/200, iter 120] loss=3.1114 msg=0.0964 img=0.0888 gan=2.7522 stat=0.1739
+[epoch 14/200, iter 160] loss=3.1600 msg=0.0926 img=0.0805 gan=2.8124 stat=0.1744
+[epoch 14/200, iter 200] loss=3.2287 msg=0.0922 img=0.0715 gan=2.8959 stat=0.1691
+[epoch 14/200, iter 240] loss=2.9594 msg=0.0901 img=0.0609 gan=2.6464 stat=0.1621
+[epoch 14/200, iter 280] loss=3.1319 msg=0.0872 img=0.0881 gan=2.7859 stat=0.1706
+[epoch 14/200, iter 320] loss=2.8024 msg=0.0827 img=0.0754 gan=2.4821 stat=0.1622
+[epoch 14/200, iter 360] loss=2.8819 msg=0.0867 img=0.0771 gan=2.5566 stat=0.1615
+[epoch 14] val msg_acc=98.86% bit_acc=99.94% seq_ber=0.07% psnr=24.18dB (27364s)
+[epoch 15/200, iter 40] loss=3.0730 msg=0.0705 img=0.0693 gan=2.7747 stat=0.1585
+[epoch 15/200, iter 80] loss=3.1353 msg=0.0684 img=0.0773 gan=2.8286 stat=0.1609
+[epoch 15/200, iter 120] loss=3.0274 msg=0.0672 img=0.0811 gan=2.7270 stat=0.1522
+[epoch 15/200, iter 160] loss=3.3033 msg=0.0654 img=0.0767 gan=2.9997 stat=0.1615
+[epoch 15/200, iter 200] loss=3.0601 msg=0.0659 img=0.0825 gan=2.7559 stat=0.1558
+[epoch 15/200, iter 240] loss=2.7886 msg=0.0633 img=0.0784 gan=2.4859 stat=0.1609
+[epoch 15/200, iter 280] loss=3.0772 msg=0.0607 img=0.0751 gan=2.7794 stat=0.1620
+[epoch 15/200, iter 320] loss=3.2150 msg=0.0591 img=0.0812 gan=2.9197 stat=0.1550
+[epoch 15/200, iter 360] loss=2.9202 msg=0.0584 img=0.0700 gan=2.6235 stat=0.1683
+[epoch 15] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=23.69dB (29366s)
+[epoch 16/200, iter 40] loss=3.0362 msg=0.0495 img=0.0761 gan=2.7543 stat=0.1563
+[epoch 16/200, iter 80] loss=3.0647 msg=0.0491 img=0.0740 gan=2.7874 stat=0.1542
+[epoch 16/200, iter 120] loss=2.8620 msg=0.0460 img=0.0663 gan=2.5913 stat=0.1584
+[epoch 16/200, iter 160] loss=2.6872 msg=0.0472 img=0.0876 gan=2.3998 stat=0.1527
+[epoch 16/200, iter 200] loss=3.1114 msg=0.0449 img=0.0729 gan=2.8424 stat=0.1511
+[epoch 16/200, iter 240] loss=2.9851 msg=0.0433 img=0.0752 gan=2.7184 stat=0.1482
+[epoch 16/200, iter 280] loss=3.1390 msg=0.0420 img=0.0714 gan=2.8687 stat=0.1568
+[epoch 16/200, iter 320] loss=3.2344 msg=0.0427 img=0.0823 gan=2.9482 stat=0.1613
+[epoch 16/200, iter 360] loss=3.1113 msg=0.0401 img=0.0715 gan=2.8437 stat=0.1560
+[epoch 16] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=24.19dB (31366s)
+[epoch 17/200, iter 40] loss=3.0529 msg=0.0348 img=0.0677 gan=2.7971 stat=0.1533
+[epoch 17/200, iter 80] loss=3.2794 msg=0.0338 img=0.0736 gan=3.0219 stat=0.1501
+[epoch 17/200, iter 120] loss=2.8448 msg=0.0342 img=0.0744 gan=2.5825 stat=0.1538
+[epoch 17/200, iter 160] loss=2.9378 msg=0.0331 img=0.0681 gan=2.6863 stat=0.1503
+[epoch 17/200, iter 200] loss=2.8463 msg=0.0314 img=0.0708 gan=2.5967 stat=0.1475
+[epoch 17/200, iter 240] loss=2.6243 msg=0.0306 img=0.0712 gan=2.3709 stat=0.1516
+[epoch 17/200, iter 280] loss=2.9246 msg=0.0313 img=0.0744 gan=2.6634 stat=0.1556
+[epoch 17/200, iter 320] loss=2.9423 msg=0.0304 img=0.0665 gan=2.6901 stat=0.1553
+[epoch 17/200, iter 360] loss=3.2394 msg=0.0295 img=0.0706 gan=2.9922 stat=0.1472
+[epoch 17] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=24.34dB (33362s)
+[epoch 18/200, iter 40] loss=2.9526 msg=0.0245 img=0.0796 gan=2.6963 stat=0.1521
+[epoch 18/200, iter 80] loss=3.0591 msg=0.0246 img=0.0642 gan=2.8202 stat=0.1500
+[epoch 18/200, iter 120] loss=3.1863 msg=0.0248 img=0.0767 gan=2.9391 stat=0.1457
+[epoch 18/200, iter 160] loss=2.9211 msg=0.0245 img=0.0824 gan=2.6571 stat=0.1571
+[epoch 18/200, iter 200] loss=3.1564 msg=0.0231 img=0.0638 gan=2.9272 stat=0.1423
+[epoch 18/200, iter 240] loss=2.9495 msg=0.0229 img=0.0621 gan=2.7137 stat=0.1507
+[epoch 18/200, iter 280] loss=3.0600 msg=0.0228 img=0.0671 gan=2.8274 stat=0.1427
+[epoch 18/200, iter 320] loss=3.0591 msg=0.0210 img=0.0642 gan=2.8137 stat=0.1603
+[epoch 18/200, iter 360] loss=3.2243 msg=0.0220 img=0.0580 gan=2.9966 stat=0.1477
+[epoch 18] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=24.85dB (35354s)
+[epoch 19/200, iter 40] loss=2.9405 msg=0.0193 img=0.0611 gan=2.7131 stat=0.1469
+[epoch 19/200, iter 80] loss=2.7072 msg=0.0195 img=0.0654 gan=2.4840 stat=0.1383
+[epoch 19/200, iter 120] loss=3.2155 msg=0.0184 img=0.0651 gan=2.9825 stat=0.1496
+[epoch 19/200, iter 160] loss=3.1213 msg=0.0186 img=0.0736 gan=2.8805 stat=0.1486
+[epoch 19/200, iter 200] loss=3.0060 msg=0.0179 img=0.0631 gan=2.7737 stat=0.1513
+[epoch 19/200, iter 240] loss=3.2191 msg=0.0174 img=0.0640 gan=2.9858 stat=0.1519
+[epoch 19/200, iter 280] loss=2.8809 msg=0.0164 img=0.0669 gan=2.6419 stat=0.1557
+[epoch 19/200, iter 320] loss=2.8554 msg=0.0167 img=0.0694 gan=2.6226 stat=0.1468
+[epoch 19/200, iter 360] loss=2.7092 msg=0.0162 img=0.0648 gan=2.4791 stat=0.1492
+[epoch 19] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=24.80dB (37349s)
+[epoch 20/200, iter 40] loss=3.1262 msg=0.0151 img=0.0724 gan=2.8802 stat=0.1585
+[epoch 20/200, iter 80] loss=3.2240 msg=0.0154 img=0.0632 gan=2.9978 stat=0.1475
+[epoch 20/200, iter 120] loss=2.9877 msg=0.0151 img=0.0696 gan=2.7567 stat=0.1462
+[epoch 20/200, iter 160] loss=3.2208 msg=0.0152 img=0.0643 gan=2.9927 stat=0.1487
+[epoch 20/200, iter 200] loss=3.1002 msg=0.0154 img=0.0647 gan=2.8785 stat=0.1416
+[epoch 20/200, iter 240] loss=2.8239 msg=0.0152 img=0.0538 gan=2.6085 stat=0.1464
+[epoch 20/200, iter 280] loss=2.8718 msg=0.0146 img=0.0715 gan=2.6350 stat=0.1507
+[epoch 20/200, iter 320] loss=3.1129 msg=0.0143 img=0.0657 gan=2.8848 stat=0.1481
+[epoch 20/200, iter 360] loss=2.9244 msg=0.0147 img=0.0583 gan=2.7092 stat=0.1421
+[epoch 20] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=24.94dB (39349s)
+[epoch 21/200, iter 40] loss=2.7691 msg=0.0133 img=0.0617 gan=2.5487 stat=0.1454
+[epoch 21/200, iter 80] loss=2.9566 msg=0.0132 img=0.0594 gan=2.7322 stat=0.1518
+[epoch 21/200, iter 120] loss=3.1641 msg=0.0133 img=0.0699 gan=2.9339 stat=0.1470
+[epoch 21/200, iter 160] loss=3.2844 msg=0.0130 img=0.0556 gan=3.0773 stat=0.1386
+[epoch 21/200, iter 200] loss=2.8949 msg=0.0123 img=0.0613 gan=2.6715 stat=0.1497
+[epoch 21/200, iter 240] loss=3.0893 msg=0.0133 img=0.0629 gan=2.8568 stat=0.1563
+[epoch 21/200, iter 280] loss=3.0517 msg=0.0129 img=0.0611 gan=2.8362 stat=0.1415
+[epoch 21/200, iter 320] loss=3.0892 msg=0.0128 img=0.0593 gan=2.8665 stat=0.1506
+[epoch 21/200, iter 360] loss=2.8948 msg=0.0124 img=0.0522 gan=2.6828 stat=0.1474
+[epoch 21] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.17dB (41346s)
+[epoch 22/200, iter 40] loss=2.5609 msg=0.0123 img=0.0530 gan=2.3483 stat=0.1472
+[epoch 22/200, iter 80] loss=3.1495 msg=0.0124 img=0.0604 gan=2.9313 stat=0.1454
+[epoch 22/200, iter 120] loss=3.1736 msg=0.0123 img=0.0559 gan=2.9521 stat=0.1534
+[epoch 22/200, iter 160] loss=2.9472 msg=0.0119 img=0.0516 gan=2.7306 stat=0.1531
+[epoch 22/200, iter 200] loss=3.0794 msg=0.0120 img=0.0630 gan=2.8579 stat=0.1465
+[epoch 22/200, iter 240] loss=3.3711 msg=0.0120 img=0.0648 gan=3.1471 stat=0.1473
+[epoch 22/200, iter 280] loss=2.9716 msg=0.0119 img=0.0596 gan=2.7550 stat=0.1451
+[epoch 22/200, iter 320] loss=2.9070 msg=0.0114 img=0.0541 gan=2.7064 stat=0.1351
+[epoch 22/200, iter 360] loss=2.9281 msg=0.0118 img=0.0649 gan=2.7003 stat=0.1511
+[epoch 22] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.13dB (43339s)
+[epoch 23/200, iter 40] loss=3.0307 msg=0.0115 img=0.0515 gan=2.8167 stat=0.1510
+[epoch 23/200, iter 80] loss=3.0318 msg=0.0118 img=0.0581 gan=2.8092 stat=0.1526
+[epoch 23/200, iter 120] loss=3.1862 msg=0.0121 img=0.0579 gan=2.9684 stat=0.1477
+[epoch 23/200, iter 160] loss=3.0971 msg=0.0118 img=0.0647 gan=2.8764 stat=0.1442
+[epoch 23/200, iter 200] loss=3.0658 msg=0.0114 img=0.0663 gan=2.8431 stat=0.1450
+[epoch 23/200, iter 240] loss=3.0183 msg=0.0110 img=0.0518 gan=2.8174 stat=0.1381
+[epoch 23/200, iter 280] loss=2.7298 msg=0.0114 img=0.0461 gan=2.5256 stat=0.1466
+[epoch 23/200, iter 320] loss=2.5574 msg=0.0120 img=0.0573 gan=2.3341 stat=0.1539
+[epoch 23/200, iter 360] loss=2.8583 msg=0.0114 img=0.0614 gan=2.6359 stat=0.1497
+[epoch 23] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.26dB (45350s)
+[epoch 24/200, iter 40] loss=2.8806 msg=0.0110 img=0.0519 gan=2.6740 stat=0.1438
+[epoch 24/200, iter 80] loss=3.0253 msg=0.0111 img=0.0513 gan=2.8172 stat=0.1457
+[epoch 24/200, iter 120] loss=2.6779 msg=0.0104 img=0.0542 gan=2.4658 stat=0.1476
+[epoch 24/200, iter 160] loss=2.9049 msg=0.0107 img=0.0528 gan=2.7010 stat=0.1403
+[epoch 24/200, iter 200] loss=3.1066 msg=0.0110 img=0.0544 gan=2.8890 stat=0.1522
+[epoch 24/200, iter 240] loss=3.0507 msg=0.0110 img=0.0542 gan=2.8421 stat=0.1433
+[epoch 24/200, iter 280] loss=3.0268 msg=0.0114 img=0.0564 gan=2.8165 stat=0.1425
+[epoch 24/200, iter 320] loss=2.9633 msg=0.0110 img=0.0626 gan=2.7359 stat=0.1538
+[epoch 24/200, iter 360] loss=2.8415 msg=0.0109 img=0.0488 gan=2.6298 stat=0.1520
+[epoch 24] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.46dB (47351s)
+[epoch 25/200, iter 40] loss=3.4039 msg=0.0106 img=0.0587 gan=3.1991 stat=0.1356
+[epoch 25/200, iter 80] loss=3.0208 msg=0.0104 img=0.0456 gan=2.8172 stat=0.1476
+[epoch 25/200, iter 120] loss=2.7528 msg=0.0104 img=0.0546 gan=2.5454 stat=0.1425
+[epoch 25/200, iter 160] loss=2.8201 msg=0.0111 img=0.0516 gan=2.6045 stat=0.1530
+[epoch 25/200, iter 200] loss=2.8412 msg=0.0111 img=0.0519 gan=2.6328 stat=0.1454
+[epoch 25/200, iter 240] loss=2.7495 msg=0.0106 img=0.0499 gan=2.5457 stat=0.1433
+[epoch 25/200, iter 280] loss=2.8782 msg=0.0109 img=0.0549 gan=2.6623 stat=0.1501
+[epoch 25/200, iter 320] loss=3.0842 msg=0.0108 img=0.0455 gan=2.8828 stat=0.1451
+[epoch 25/200, iter 360] loss=2.5656 msg=0.0108 img=0.0547 gan=2.3404 stat=0.1596
+[epoch 25] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.74dB (49251s)
+[epoch 26/200, iter 40] loss=2.8053 msg=0.0100 img=0.0454 gan=2.5974 stat=0.1525
+[epoch 26/200, iter 80] loss=2.9421 msg=0.0098 img=0.0482 gan=2.7372 stat=0.1469
+[epoch 26/200, iter 120] loss=2.7395 msg=0.0108 img=0.0443 gan=2.5454 stat=0.1390
+[epoch 26/200, iter 160] loss=2.9268 msg=0.0103 img=0.0475 gan=2.7219 stat=0.1470
+[epoch 26/200, iter 200] loss=2.7914 msg=0.0100 img=0.0519 gan=2.5779 stat=0.1516
+[epoch 26/200, iter 240] loss=2.9995 msg=0.0104 img=0.0529 gan=2.7827 stat=0.1535
+[epoch 26/200, iter 280] loss=2.3560 msg=0.0103 img=0.0469 gan=2.1558 stat=0.1430
+[epoch 26/200, iter 320] loss=2.8869 msg=0.0106 img=0.0540 gan=2.6701 stat=0.1523
+[epoch 26/200, iter 360] loss=2.8840 msg=0.0104 img=0.0438 gan=2.6906 stat=0.1392
+[epoch 26] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.98dB (52368s)
+[epoch 27/200, iter 40] loss=3.1964 msg=0.0097 img=0.0496 gan=2.9911 stat=0.1460
+[epoch 27/200, iter 80] loss=3.0987 msg=0.0106 img=0.0469 gan=2.8958 stat=0.1455
+[epoch 27/200, iter 120] loss=3.3337 msg=0.0104 img=0.0527 gan=3.1356 stat=0.1350
+[epoch 27/200, iter 160] loss=3.0089 msg=0.0099 img=0.0504 gan=2.8071 stat=0.1415
+[epoch 27/200, iter 200] loss=2.9066 msg=0.0100 img=0.0499 gan=2.6972 stat=0.1495
+[epoch 27/200, iter 240] loss=2.6032 msg=0.0100 img=0.0441 gan=2.4062 stat=0.1428
+[epoch 27/200, iter 280] loss=2.7219 msg=0.0101 img=0.0497 gan=2.5103 stat=0.1518
+[epoch 27/200, iter 320] loss=3.0557 msg=0.0098 img=0.0437 gan=2.8551 stat=0.1471
+[epoch 27/200, iter 360] loss=2.6339 msg=0.0097 img=0.0461 gan=2.4212 stat=0.1569
+[epoch 27] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.05dB (53246s)
+[epoch 28/200, iter 40] loss=2.8000 msg=0.0097 img=0.0422 gan=2.6066 stat=0.1415
+[epoch 28/200, iter 80] loss=2.7028 msg=0.0097 img=0.0446 gan=2.4934 stat=0.1552
+[epoch 28/200, iter 120] loss=2.9015 msg=0.0095 img=0.0468 gan=2.6986 stat=0.1466
+[epoch 28/200, iter 160] loss=2.8244 msg=0.0100 img=0.0451 gan=2.6261 stat=0.1431
+[epoch 28/200, iter 200] loss=2.6237 msg=0.0097 img=0.0399 gan=2.4312 stat=0.1428
+[epoch 28/200, iter 240] loss=2.8970 msg=0.0096 img=0.0463 gan=2.6912 stat=0.1498
+[epoch 28/200, iter 280] loss=2.8374 msg=0.0097 img=0.0443 gan=2.6391 stat=0.1442
+[epoch 28/200, iter 320] loss=2.9704 msg=0.0097 img=0.0440 gan=2.7640 stat=0.1528
+[epoch 28/200, iter 360] loss=2.5977 msg=0.0094 img=0.0422 gan=2.3983 stat=0.1478
+[epoch 28] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.38dB (54127s)
+[epoch 29/200, iter 40] loss=2.7018 msg=0.0098 img=0.0469 gan=2.4921 stat=0.1531
+[epoch 29/200, iter 80] loss=2.4851 msg=0.0092 img=0.0412 gan=2.2907 stat=0.1439
+[epoch 29/200, iter 120] loss=2.9130 msg=0.0093 img=0.0431 gan=2.7223 stat=0.1383
+[epoch 29/200, iter 160] loss=3.0155 msg=0.0096 img=0.0449 gan=2.8177 stat=0.1433
+[epoch 29/200, iter 200] loss=3.0885 msg=0.0093 img=0.0385 gan=2.8837 stat=0.1569
+[epoch 29/200, iter 240] loss=2.9710 msg=0.0090 img=0.0437 gan=2.7754 stat=0.1429
+[epoch 29/200, iter 280] loss=2.6920 msg=0.0094 img=0.0492 gan=2.4849 stat=0.1486
+[epoch 29/200, iter 320] loss=2.7676 msg=0.0096 img=0.0466 gan=2.5631 stat=0.1483
+[epoch 29/200, iter 360] loss=2.8042 msg=0.0095 img=0.0427 gan=2.6013 stat=0.1506
+[epoch 29] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.21dB (55808s)
+[epoch 30/200, iter 40] loss=2.7263 msg=0.0095 img=0.0495 gan=2.5168 stat=0.1506
+[epoch 30/200, iter 80] loss=2.7024 msg=0.0092 img=0.0406 gan=2.5045 stat=0.1481
+[epoch 30/200, iter 120] loss=2.8472 msg=0.0089 img=0.0482 gan=2.6419 stat=0.1482
+[epoch 30/200, iter 160] loss=2.8320 msg=0.0093 img=0.0440 gan=2.6349 stat=0.1437
+[epoch 30/200, iter 200] loss=2.9165 msg=0.0092 img=0.0447 gan=2.7161 stat=0.1464
+[epoch 30/200, iter 240] loss=2.8588 msg=0.0092 img=0.0421 gan=2.6627 stat=0.1447
+[epoch 30/200, iter 280] loss=3.0542 msg=0.0090 img=0.0430 gan=2.8591 stat=0.1431
+[epoch 30/200, iter 320] loss=2.7967 msg=0.0092 img=0.0375 gan=2.5930 stat=0.1569
+[epoch 30/200, iter 360] loss=2.8103 msg=0.0091 img=0.0419 gan=2.6222 stat=0.1371
+[epoch 30] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.84dB (57760s)
+[epoch 31/200, iter 40] loss=2.6898 msg=0.0095 img=0.0430 gan=2.4966 stat=0.1407
+[epoch 31/200, iter 80] loss=3.1185 msg=0.0093 img=0.0366 gan=2.9281 stat=0.1444
+[epoch 31/200, iter 120] loss=2.8928 msg=0.0091 img=0.0420 gan=2.6975 stat=0.1442
+[epoch 31/200, iter 160] loss=2.9509 msg=0.0088 img=0.0410 gan=2.7565 stat=0.1446
+[epoch 31/200, iter 200] loss=2.7639 msg=0.0095 img=0.0505 gan=2.5531 stat=0.1508
+[epoch 31/200, iter 240] loss=2.8422 msg=0.0087 img=0.0426 gan=2.6411 stat=0.1498
+[epoch 31/200, iter 280] loss=2.6240 msg=0.0090 img=0.0404 gan=2.4230 stat=0.1517
+[epoch 31/200, iter 320] loss=3.2221 msg=0.0088 img=0.0382 gan=3.0310 stat=0.1440
+[epoch 31/200, iter 360] loss=2.7280 msg=0.0090 img=0.0373 gan=2.5345 stat=0.1471
+[epoch 31] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.50dB (59333s)
+[epoch 32/200, iter 40] loss=3.1373 msg=0.0090 img=0.0436 gan=2.9423 stat=0.1424
+[epoch 32/200, iter 80] loss=2.6848 msg=0.0086 img=0.0364 gan=2.4880 stat=0.1519
+[epoch 32/200, iter 120] loss=2.7591 msg=0.0088 img=0.0411 gan=2.5616 stat=0.1476
+[epoch 32/200, iter 160] loss=3.0401 msg=0.0096 img=0.0420 gan=2.8433 stat=0.1452
+[epoch 32/200, iter 200] loss=2.9904 msg=0.0091 img=0.0410 gan=2.7989 stat=0.1414
+[epoch 32/200, iter 240] loss=2.7945 msg=0.0090 img=0.0416 gan=2.5908 stat=0.1531
+[epoch 32/200, iter 280] loss=3.0115 msg=0.0088 img=0.0451 gan=2.8128 stat=0.1449
+[epoch 32/200, iter 320] loss=2.8817 msg=0.0090 img=0.0428 gan=2.6800 stat=0.1500
+[epoch 32/200, iter 360] loss=2.7606 msg=0.0083 img=0.0369 gan=2.5717 stat=0.1437
+[epoch 32] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.30dB (60455s)
+[epoch 33/200, iter 40] loss=2.9681 msg=0.0083 img=0.0390 gan=2.7818 stat=0.1389
+[epoch 33/200, iter 80] loss=2.4165 msg=0.0118 img=0.0480 gan=2.2035 stat=0.1532
+[epoch 33/200, iter 120] loss=3.0268 msg=0.0092 img=0.0479 gan=2.8212 stat=0.1485
+[epoch 33/200, iter 160] loss=3.0145 msg=0.0088 img=0.0448 gan=2.8171 stat=0.1438
+[epoch 33/200, iter 200] loss=3.0322 msg=0.0091 img=0.0427 gan=2.8287 stat=0.1518
+[epoch 33/200, iter 240] loss=3.1423 msg=0.0085 img=0.0406 gan=2.9473 stat=0.1460
+[epoch 33/200, iter 280] loss=3.1010 msg=0.0089 img=0.0388 gan=2.9072 stat=0.1460
+[epoch 33/200, iter 320] loss=2.8862 msg=0.0087 img=0.0377 gan=2.6898 stat=0.1501
+[epoch 33/200, iter 360] loss=2.9535 msg=0.0082 img=0.0409 gan=2.7610 stat=0.1434
+[epoch 33] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.36dB (61750s)
+[epoch 34/200, iter 40] loss=2.7246 msg=0.0083 img=0.0387 gan=2.5380 stat=0.1396
+[epoch 34/200, iter 80] loss=2.6799 msg=0.0085 img=0.0368 gan=2.4862 stat=0.1483
+[epoch 34/200, iter 120] loss=2.9367 msg=0.0083 img=0.0368 gan=2.7403 stat=0.1513
+[epoch 34/200, iter 160] loss=2.9683 msg=0.0087 img=0.0445 gan=2.7683 stat=0.1468
+[epoch 34/200, iter 200] loss=3.1284 msg=0.0087 img=0.0417 gan=2.9279 stat=0.1501
+[epoch 34/200, iter 240] loss=2.6868 msg=0.0085 img=0.0364 gan=2.5032 stat=0.1388
+[epoch 34/200, iter 280] loss=2.9747 msg=0.0083 img=0.0369 gan=2.7876 stat=0.1420
+[epoch 34/200, iter 320] loss=2.5063 msg=0.0085 img=0.0408 gan=2.3027 stat=0.1542
+[epoch 34/200, iter 360] loss=2.8725 msg=0.0084 img=0.0444 gan=2.6722 stat=0.1475
+[epoch 34] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.38dB (62991s)
+[epoch 35/200, iter 40] loss=2.9634 msg=0.0082 img=0.0395 gan=2.7653 stat=0.1504
+[epoch 35/200, iter 80] loss=3.0105 msg=0.0079 img=0.0334 gan=2.8297 stat=0.1395
+[epoch 35/200, iter 120] loss=2.5196 msg=0.0082 img=0.0367 gan=2.3244 stat=0.1502
+[epoch 35/200, iter 160] loss=2.9932 msg=0.0084 img=0.0371 gan=2.7990 stat=0.1487
+[epoch 35/200, iter 200] loss=2.8484 msg=0.0081 img=0.0391 gan=2.6498 stat=0.1513
+[epoch 35/200, iter 240] loss=2.7986 msg=0.0079 img=0.0347 gan=2.6193 stat=0.1367
+[epoch 35/200, iter 280] loss=2.9865 msg=0.0083 img=0.0333 gan=2.7965 stat=0.1485
+[epoch 35/200, iter 320] loss=2.7233 msg=0.0087 img=0.0428 gan=2.5204 stat=0.1514
+[epoch 35/200, iter 360] loss=2.6770 msg=0.0080 img=0.0384 gan=2.4850 stat=0.1456
+[epoch 35] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=25.87dB (64225s)
+[epoch 36/200, iter 40] loss=3.1888 msg=0.0079 img=0.0372 gan=2.9981 stat=0.1456
+[epoch 36/200, iter 80] loss=3.0458 msg=0.0079 img=0.0401 gan=2.8570 stat=0.1408
+[epoch 36/200, iter 120] loss=2.7791 msg=0.0079 img=0.0419 gan=2.5731 stat=0.1563
+[epoch 36/200, iter 160] loss=2.9733 msg=0.0078 img=0.0382 gan=2.7794 stat=0.1479
+[epoch 36/200, iter 200] loss=2.9412 msg=0.0083 img=0.0364 gan=2.7433 stat=0.1532
+[epoch 36/200, iter 240] loss=2.9733 msg=0.0084 img=0.0404 gan=2.7784 stat=0.1462
+[epoch 36/200, iter 280] loss=3.3680 msg=0.0081 img=0.0377 gan=3.1802 stat=0.1419
+[epoch 36/200, iter 320] loss=2.6746 msg=0.0082 img=0.0315 gan=2.4864 stat=0.1485
+[epoch 36/200, iter 360] loss=2.7889 msg=0.0082 img=0.0366 gan=2.5974 stat=0.1467
+[epoch 36] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.87dB (69649s)
+[epoch 37/200, iter 40] loss=2.7409 msg=0.0078 img=0.0366 gan=2.5497 stat=0.1468
+[epoch 37/200, iter 80] loss=2.8247 msg=0.0077 img=0.0350 gan=2.6323 stat=0.1497
+[epoch 37/200, iter 120] loss=2.6983 msg=0.0078 img=0.0380 gan=2.5073 stat=0.1452
+[epoch 37/200, iter 160] loss=2.8864 msg=0.0077 img=0.0376 gan=2.7040 stat=0.1371
+[epoch 37/200, iter 200] loss=2.7561 msg=0.0077 img=0.0368 gan=2.5592 stat=0.1524
+[epoch 37/200, iter 240] loss=2.9495 msg=0.0082 img=0.0335 gan=2.7508 stat=0.1570
+[epoch 37/200, iter 280] loss=2.9201 msg=0.0079 img=0.0351 gan=2.7293 stat=0.1477
+[epoch 37/200, iter 320] loss=2.9423 msg=0.0078 img=0.0401 gan=2.7464 stat=0.1480
+[epoch 37/200, iter 360] loss=2.8409 msg=0.0077 img=0.0398 gan=2.6552 stat=0.1381
+[epoch 37] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.76dB (824s)
+[epoch 38/200, iter 40] loss=2.9700 msg=0.0076 img=0.0368 gan=2.7812 stat=0.1444
+[epoch 38/200, iter 80] loss=3.3220 msg=0.0078 img=0.0365 gan=3.1387 stat=0.1391
+[epoch 38/200, iter 120] loss=2.9425 msg=0.0076 img=0.0339 gan=2.7583 stat=0.1427
+[epoch 38/200, iter 160] loss=3.3336 msg=0.0077 img=0.0350 gan=3.1376 stat=0.1533
+[epoch 38/200, iter 200] loss=2.9610 msg=0.0078 img=0.0354 gan=2.7706 stat=0.1472
+[epoch 38/200, iter 240] loss=2.5312 msg=0.0090 img=0.0376 gan=2.3364 stat=0.1482
+[epoch 38/200, iter 280] loss=3.1849 msg=0.0079 img=0.0314 gan=2.9977 stat=0.1479
+[epoch 38/200, iter 320] loss=2.9051 msg=0.0081 img=0.0338 gan=2.7140 stat=0.1492
+[epoch 38/200, iter 360] loss=2.8731 msg=0.0077 img=0.0391 gan=2.6835 stat=0.1429
+[epoch 38] val msg_acc=100.00% bit_acc=100.00% seq_ber=0.00% psnr=26.61dB (1729s)
+[epoch 39/200, iter 40] loss=2.6173 msg=0.0077 img=0.0322 gan=2.4339 stat=0.1435
+[epoch 39/200, iter 80] loss=2.8346 msg=0.0076 img=0.0409 gan=2.6406 stat=0.1455
+[epoch 39/200, iter 120] loss=2.9907 msg=0.0077 img=0.0343 gan=2.8017 stat=0.1469
+[epoch 39/200, iter 160] loss=2.5511 msg=0.0076 img=0.0334 gan=2.3616 stat=0.1485
+[epoch 39/200, iter 200] loss=2.8616 msg=0.0077 img=0.0381 gan=2.6712 stat=0.1446
+[epoch 39/200, iter 240] loss=3.0720 msg=0.0078 img=0.0363 gan=2.8698 stat=0.1581
+[epoch 39/200, iter 280] loss=3.0635 msg=0.0079 img=0.0396 gan=2.8770 stat=0.1390
+[epoch 39/200, iter 320] loss=2.8539 msg=0.0077 img=0.0329 gan=2.6645 stat=0.1488
+[epoch 39/200, iter 360] loss=3.1370 msg=0.0075 img=0.0346 gan=2.9519 stat=0.1430

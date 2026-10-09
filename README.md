@@ -50,8 +50,13 @@ python main.py train --dataset_dir dataset/ --num_epoch 100 --crop
 ```
 
 - 默认屏摄噪声层：`--distortion ScreenShooting`（也可 `Identity` 做干净通道训练）；
-- 每 epoch 在验证集上输出：消息准确率（18 bit 整串一致率）、位准确率、序列 BER；
-- 模型保存至 `checkpoints/`（`best.pth` + 每 epoch 快照），日志在 `logs/`。
+- 每 epoch 在验证集上输出：消息准确率（18 bit 整串一致率）、位准确率、序列 BER、PSNR；
+- 模型保存至 `checkpoints/`（`best.pth` + 每 epoch 快照），日志在 `logs/`；
+- **断点续训**（中断后从上次位置继续，不重头开始）：
+
+```bash
+python main.py train --num_epoch 200 --resume checkpoints/checkpoint_epoch_42.pth
+```
 
 ### 2. 嵌入
 
@@ -84,7 +89,7 @@ python main.py extract --model_path checkpoints/best.pth \
 
 | 参数 | 值 | 说明 |
 |------|-----|------|
-| 图像尺寸 | 128×128 | `--image_size` |
+| 图像尺寸 | 256×256 | `--image_size`（128 亦可用；256 下默认 batch=4，4GB 显存可训练） |
 | 容量 | 18 bit | K=6 特征 × M=8 级（每特征 3 bit） |
 | 序列长度 | 192 | 6 块 × 32 符号（±1） |
 | λ1 序列损失 | 3 | 提取序列 MSE |

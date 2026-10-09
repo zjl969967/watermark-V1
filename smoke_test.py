@@ -109,7 +109,7 @@ def run_smoke(cfg: Config) -> bool:
     # S5 短训练
     print('\n[S5] 短训练（合成数据、全损失）')
     smoke_cfg = Config(
-        dataset_dir=SMOKE_DIR, image_size=cfg.image_size, batch_size=8,
+        dataset_dir=SMOKE_DIR, image_size=cfg.image_size, batch_size=4,
         num_epoch=max(1, (cfg.smoke_iters + 3) // 4), log_step=4, model_save_step=1,
         eval_every=1, distortion='ScreenShooting', crop=False,
         checkpoint_dir=os.path.join(SMOKE_DIR, 'ckpt'),

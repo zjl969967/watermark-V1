@@ -51,6 +51,21 @@ class Solver:
         self.optimizer_D = optim.Adam(self.net_D.parameters(), lr=cfg.lr)
         self.optimizer = optim.Adam(self.net.parameters(), lr=cfg.lr)
         self.crop_layer = RandomCrop(cfg.crop_min_area) if cfg.crop else None
+        self.start_epoch = 0
+        self.best_acc = -1.0
+        if cfg.resume:
+            ckpt = torch.load(cfg.resume, map_location=self.device, weights_only=False)
+            self.net.Encoder.load_state_dict(ckpt['encoder'])
+            self.net.Decoder.load_state_dict(ckpt['decoder'])
+            self.net_D.load_state_dict(ckpt['discriminator'])
+            if ckpt.get('optimizer') is not None:
+                self.optimizer.load_state_dict(ckpt['optimizer'])
+                self.optimizer_D.load_state_dict(ckpt['optimizer_D'])
+            self.start_epoch = int(ckpt.get('epoch', -1)) + 1
+            self.best_acc = float(ckpt.get('best_acc', -1.0))
+            hist = f'{self.best_acc * 100:.2f}%' if self.best_acc >= 0 else '无'
+            print(f'[train] 断点续训：加载 {cfg.resume}，从 epoch {self.start_epoch} '
+                  f'继续，历史 best_msg_acc={hist}')
 
     def build_embed(self):
         self.encoder = Encoder_Decoder(self.config.distortion,
@@ -84,14 +99,16 @@ class Solver:
         os.makedirs(cfg.log_dir, exist_ok=True)
         os.makedirs(cfg.result_dir, exist_ok=True)
         tag = f'train_{cfg.distortion}' + ('_crop' if cfg.crop else '')
-        txtfile = open(os.path.join(cfg.log_dir, tag + '.txt'), 'w', encoding='utf-8')
+        # 续训时追加日志，避免覆盖历史记录
+        log_mode = 'a' if self.start_epoch > 0 else 'w'
+        txtfile = open(os.path.join(cfg.log_dir, tag + '.txt'), log_mode, encoding='utf-8')
         print(f'[train] device={self.device} distortion={cfg.distortion} '
-              f'crop={cfg.crop} epochs={cfg.num_epoch} '
+              f'crop={cfg.crop} epochs={cfg.num_epoch} start_epoch={self.start_epoch} '
               f'train_imgs={len(train_loader.dataset)} val_imgs={len(val_loader.dataset)}')
-        best_acc = -1.0
+        best_acc = self.best_acc
         start_time = time.time()
 
-        for epoch in range(cfg.num_epoch):
+        for epoch in range(self.start_epoch, cfg.num_epoch):
             running = dict(msg=0.0, img=0.0, gan=0.0, stat=0.0)
             self.net.train()
             for i, batch in enumerate(train_loader):
@@ -110,7 +127,12 @@ class Solver:
                 loss_msg = self.criterion_MSE(decoded, seq)
 
                 # ---- 梯度掩膜图像损失（PIMoG 式）----
-                inputgrad = torch.autograd.grad(loss_msg, inputs, create_graph=True)[0]
+                # retain_graph=True：后续 loss.backward() 还要遍历同一前向图
+                # （PIMoG 用 create_graph=True 隐式达到同样效果，但那会构建二阶图、
+                # 显存翻倍；掩膜已 detach 不参与梯度，二阶图纯属浪费——实测 256×256
+                # batch4 下 4GB 显存 create_graph=False+retain_graph 可训练）
+                inputgrad = torch.autograd.grad(loss_msg, inputs,
+                                                create_graph=False, retain_graph=True)[0]
                 mask = 1.0 - _minmax01(inputgrad) + 1.0  # 值域 [1,2]
                 loss_img = self.criterion_MSE(encoded * mask.detach(),
                                               inputs * mask.detach())
@@ -163,16 +185,21 @@ class Solver:
             print(line)
             print(line, file=txtfile, flush=True)
 
-            # ---- 保存 ----
+            # ---- 保存（先更新 best_acc，让 checkpoint 携带最新历史最优）----
+            save_best = msg_acc >= best_acc
+            if save_best:
+                best_acc = msg_acc
             ckpt = {'encoder': self.net.Encoder.state_dict(),
                     'decoder': self.net.Decoder.state_dict(),
                     'discriminator': self.net_D.state_dict(),
-                    'epoch': epoch}
+                    'optimizer': self.optimizer.state_dict(),
+                    'optimizer_D': self.optimizer_D.state_dict(),
+                    'epoch': epoch,
+                    'best_acc': best_acc}
             if (epoch + 1) % cfg.model_save_step == 0:
                 torch.save(ckpt, os.path.join(cfg.checkpoint_dir,
                                               f'checkpoint_epoch_{epoch + 1}.pth'))
-            if msg_acc >= best_acc:
-                best_acc = msg_acc
+            if save_best:
                 torch.save(ckpt, os.path.join(cfg.checkpoint_dir, 'best.pth'))
         txtfile.close()
         print(f'[train] done, best val msg_acc={best_acc * 100:.2f}%')
